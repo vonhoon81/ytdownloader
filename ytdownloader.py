@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
 from pytube import YouTube
 import json
 import os
@@ -40,6 +40,7 @@ def download_video():
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         progress_label.pack_forget()  # Hide the label if an error occurs
+        messagebox.showerror("Error", str(e))  # Show error message as a popup
 
 def on_progress(stream, chunk, bytes_remaining):
     total_size = stream.filesize
