@@ -13,6 +13,7 @@ def sanitize_filename(filename):
 def download_video():
     url = url_entry.get()
     try:
+        progress_label.config(text=f"Download Progress: Starting...")
         # Show the progress label
         progress_label.pack()
         # Create a YouTube object
