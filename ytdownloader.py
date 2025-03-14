@@ -5,7 +5,7 @@ import re
 import os
 import json
 import ttkbootstrap as ttk
-import webbroswer
+import webbrowser
 
 def sanitize_filename(filename):
     sanitized = re.sub(r'[<>:"/\\|?*]', '', filename)
